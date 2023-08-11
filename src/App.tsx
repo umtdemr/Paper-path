@@ -1,10 +1,9 @@
 import './App.css'
+import Canvas from './components/Canvas'
 
 function App() {
   return (
-    <div>
-      <canvas id="myCanvas" resize></canvas>
-    </div>
+    <Canvas />
   )
 }
 
