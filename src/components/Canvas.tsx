@@ -1,26 +1,13 @@
 import { useRef, useEffect } from 'react';
-import Paper from 'paper';
-
-interface IPaperMouseEvent extends MouseEvent {
-    point: paper.Point;
-}
+import Paper, { Point, Path } from 'paper';
 
 const draw1 = () => {
-    const myPath = new Paper.Path();
-  
-    Paper.view.onMouseDown = () => {
-        myPath.strokeColor = {
-            hue: Math.random() * 360,
-            saturation: 1,
-            brightness: 1
-        }
-      myPath.strokeWidth = 3;
-    };
-  
-    Paper.view.onMouseDrag = (event: IPaperMouseEvent) => {
-      myPath.add(event.point);
-    };
-  };
+    const myPath = new Path();
+    myPath.strokeColor = 'red';
+    myPath.add(new Point(300, 100));
+    myPath.add(new Point(500, 50)); 
+
+};
 
 export default function Canvas() {
     const canvasRef = useRef<HTMLCanvasElement>(null)
