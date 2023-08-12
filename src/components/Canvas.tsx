@@ -11,7 +11,7 @@ const draw1 = () => {
     const myPath = new Path();
     const lassoPath = new Path();
     myPath.strokeColor = '#000';
-    myPath.strokeWidth = 3;
+    myPath.strokeWidth = 50;
     lassoPath.strokeColor = 'red';
     lassoPath.strokeWidth = 3;
     lassoPath.dashArray = [5, 5];
